@@ -119,7 +119,7 @@ a:hover {
   /* 在WebKit瀏覽器上隱藏滾動條 */
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1500px) {
   .menu {
     width: 0;
   }

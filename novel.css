@@ -121,6 +121,6 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .menu {
-    width: 50px;
+    width: 0;
   }
 }

@@ -73,7 +73,7 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 200px;
   height: 100vh;
   overflow-y: scroll;
   background-color: #a18c8c;
@@ -117,3 +117,10 @@ a:hover {
 .menu::-webkit-scrollbar {
   display: none;
   /* 在WebKit瀏覽器上隱藏滾動條 */
+}
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    width: 50px;
+  }
+}

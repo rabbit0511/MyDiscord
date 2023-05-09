@@ -118,3 +118,32 @@ a:hover {
   display: none;
   /* 在WebKit瀏覽器上隱藏滾動條 */
 }
+
+@media (max-width: 767px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .menu ul {
+    position: static;
+  }
+
+  .menu li {
+    border-bottom: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .current-chapter {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}

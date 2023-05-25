@@ -56,10 +56,14 @@
             var Random = parseFloat(document.getElementById('inputRandom').value);
             var game = parseFloat(document.getElementById('inputGame').value);
             var value = (10 - 10 * A) / A
-            var result = (value * Random * game / 10).toFixed(0);
-            var poolMaintain = (result / 10).toFixed(2);
-            var shipment = (result / value).toFixed(2);
-            document.getElementById('result').innerHTML = `獎池維持: ${poolMaintain} 萬<br>出貨: ${shipment} 萬`;
+            var AnserValue = (10 - 10 * A) / A,
+                AnserA1 = Random * game / 10,
+                AnserB1 = AnserValue * Random * game / 100,
+                AnserC1 = 10 / A * Random * game / 100
+            document.getElementById('result').innerHTML = `獎池維持: ${AnserB1} 萬 ~ ${AnserC1}萬<br>出貨: ${AnserA1} 萬`;
+
+
+
         }
     </script>
 </head>

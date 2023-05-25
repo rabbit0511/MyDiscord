@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>計算結果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 120px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        p#result {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function calculate() {
+            var A = parseFloat(document.getElementById('inputA').value);
+            var Random = parseFloat(document.getElementById('inputRandom').value);
+            var game = parseFloat(document.getElementById('inputGame').value);
+            var value = (10 - 10 * A) / A
+            var result = (value * Random * game / 10).toFixed(0);
+            var poolMaintain = (result / 10).toFixed(2);
+            var shipment = (result / value).toFixed(2);
+            document.getElementById('result').innerHTML = `獎池維持: ${poolMaintain} 萬<br>出貨: ${shipment} 萬`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>計算結果</h1>
+
+        <label for="inputA">給予%數(0.2 = 20%)：</label><br>
+        <input type="number" id="inputA" value=0.2><br><br>
+
+        <label for="inputRandom">機率(9 = 1/9)</label><br>
+        <input type="number" id="inputRandom" value=9><br><br>
+
+        <label for="inputGame">金額(單位:萬)</label><br>
+        <input type="number" id="inputGame" value=1000><br><br>
+
+        <button onclick="calculate()">計算</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        console.log('請在上方輸入框填入數字後，點擊「計算」按鈕');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/* body樣式 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #574b4b;
+}
+
+/* 容器樣式 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #5f5656;
+  border: 1px solid #5f5656;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 段落樣式 */
+p {
+  color: #b4abab;
+}
+
+/* 標題樣式 */
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* 章節樣式 */
+.chapter {
+  margin-top: 40px;
+}
+
+/* 章節標題樣式 */
+.chapter-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* 章節內容樣式 */
+.chapter-content {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* 導覽樣式 */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #574b4b;
+}
+
+/* 導覽鏈接樣式 */
+.navigation a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #3e8e41;
+}
+
+/* 側邊菜單樣式 */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #a18c8c;
+}
+
+/* 菜單列表樣式 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 鏈接樣式 */
+li {
+  border-bottom: 1px solid #533e3e;
+}
+
+a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  background-color: #ccc;
+}
+
+/* 當前章節樣式 */
+.current-chapter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #5f5656;
+  border-bottom-left-radius: 5px;
+  font-weight: bold;
+}
+
+
+.menu::-webkit-scrollbar {
+  display: none;
+  /* 在WebKit瀏覽器上隱藏滾動條 */
+}
+
+@media only screen and (max-width: 1500px) {
+  .menu {
+    width: 0;
+  }
+}
